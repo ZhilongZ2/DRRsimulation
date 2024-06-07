@@ -16,6 +16,5 @@ Suggests:
     MASS,
     ggplot2,
     tidyverse,
-    patchwork,
-    mr.divw
+    patchwork
 URL: https://zhilongz2.github.io/DRRsimulation/
