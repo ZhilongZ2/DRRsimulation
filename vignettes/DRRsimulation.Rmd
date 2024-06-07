@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 )
 ```
 This is an example to run debiased reduce rank regression simulation using DRRsimulaion. For convenience, number of trials is set to be a small number (eloop = 10). Typically eloop >= 100 is recommended to get a good approximation of the expectation.
-```{r}
+```{r, include=FALSE}
 library(devtools)
 install_github("tye27/mr.divw")
 library(DRRsimulation)
@@ -30,7 +30,9 @@ library(MASS)
 library(ggplot2)
 library(tidyverse)
 library(patchwork)
+```
 
+```{r}
 data("bmi.cad")
 load('multivariate_data_medium.rda')
 
