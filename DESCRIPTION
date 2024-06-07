@@ -20,3 +20,4 @@ Suggests:
     mr.divw
 Install: 
     install_github("tye27/mr.divw")
+URL: https://zhilongz2.github.io/DRRsimulation/
