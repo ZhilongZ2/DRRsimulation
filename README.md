@@ -23,12 +23,7 @@ library(DRRsimulation)
 
 # Dependencies
 
-The package depends on the following packages: knitr, matrixStats, MASS, ggplot2, tidyverse, patchwork, mr.divw. For mr.divw, install like this:
-
-```R
-library(devtools)
-install_github("tye27/mr.divw")
-```
+The package depends on the following packages: knitr, matrixStats, MASS, ggplot2, tidyverse, patchwork, mr.divw.
 
 
 # Session info
