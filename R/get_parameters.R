@@ -7,17 +7,13 @@
 #' @return A list of all the parameters
 #' @export
 get_parameters = function(sample_weight){
-  # library(devtools)
-  # install_github("tye27/mr.divw")
+
   library(mr.divw)
   library(matrixStats)
   library(MASS)
   library(ggplot2)
   library(tidyverse)
   library(patchwork)
-
-  data("bmi.cad")
-  load('data/multivariate_data_medium.rda')
 
   # var_Z & VX_tilde ----------------------------------------------------------------
   pz = 2000 # pz can be changed to any number

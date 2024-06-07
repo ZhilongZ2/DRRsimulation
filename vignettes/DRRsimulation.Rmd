@@ -1,5 +1,28 @@
-library(devtools)
-install_github("tye27/mr.divw")
+---
+title: "A example of using DRRsimulation"
+author: "Zhilong Zhang"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    theme: united
+vignette: >
+  %\VignetteIndexEntry{A example of using DRRsimulation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+This is an example to run debiased reduce rank regression simulation using DRRsimulaion. For convenience, number of trials is set to be a small number (eloop = 10). Typically eloop >= 100 is recommended to get a good approximation of the expectation.
+```{r}
+# library(devtools)
+# install_github("tye27/mr.divw")
 library(DRRsimulation)
 library(mr.divw)
 library(matrixStats)
@@ -9,7 +32,7 @@ library(tidyverse)
 library(patchwork)
 
 data("bmi.cad")
-load('data/multivariate_data_medium.rda')
+load('multivariate_data_medium.rda')
 
 set.seed(2024)
 
@@ -109,7 +132,7 @@ for (i in 1:72) {
 
 index1 <- order(abs_mean_entry_bias, decreasing = T)
 index2 <- order(sd_entry_bias, decreasing = T)
-myplots[index1[5:1]]
+myplots[index1[5:1]] #select entries with the top 5 bias with naive reduced rank estimator
 
 # boxplot the bias of AB_d_hat ------------------------------------------------------------
 weight_to_plot <- "0.2"
@@ -127,4 +150,6 @@ for (i in 1:72) {
 
 index1_d <- order(abs_mean_entry_bias_d, decreasing = T)
 index2_d <- order(sd_entry_bias_d, decreasing = T)
-myplots_d[index1_d[5:1]]
+myplots_d[index1_d[5:1]] #select entries with the top 5 bias with debiased reduced rank estimator
+```
+

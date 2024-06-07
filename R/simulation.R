@@ -6,17 +6,13 @@
 #' @return A list of calculated A_hat, B_hat, AB_hat, A_d_hat, B_d_hat, AB_d_hat
 #' @export
 simulation = function(parameters, n) {
-  # library(devtools)
-  # install_github("tye27/mr.divw")
+
   library(mr.divw)
   library(matrixStats)
   library(MASS)
   library(ggplot2)
   library(tidyverse)
   library(patchwork)
-
-  data("bmi.cad")
-  load('data/multivariate_data_medium.rda')
 
   # n: number of samples (pz)
   # get parameters

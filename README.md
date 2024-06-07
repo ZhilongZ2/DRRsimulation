@@ -7,8 +7,10 @@ output: github_document
 This is a package for debiased reduce rank regression.
 
 - The URL to the GitHub (i.e., the source code) is: https://github.com/ZhilongZ2/DRRsimulation
+- The URL to the Pkgdown webpage is: https://zhilongz2.github.io/DRRsimulation/
 
 # How to install
+
 This package is called `DRRsimulaion`. To install, run the following code (in R):
 
 ```R
@@ -23,7 +25,19 @@ library(DRRsimulation)
 
 # Dependencies
 
-The package depends on the following packages: knitr, matrixStats, MASS, ggplot2, tidyverse, patchwork, mr.divw.
+The package depends on the following packages: \
+knitr, 
+matrixStats, 
+MASS, 
+ggplot2, 
+tidyverse, 
+patchwork, 
+mr.divw.\
+Note: To run this package require you to install mr.divw before hand. Run the following code if it is not installed.
+```R
+library(devtools)
+devtools::install_github("tye27/mr.divw")
+```
 
 
 # Session info
