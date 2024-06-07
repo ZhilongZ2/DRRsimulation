@@ -28,7 +28,7 @@ The package depends on the following packages: knitr, matrixStats, MASS, ggplot2
 ```R
 library(devtools)
 install_github("tye27/mr.divw")
-```
+
 
 # Session info
 
